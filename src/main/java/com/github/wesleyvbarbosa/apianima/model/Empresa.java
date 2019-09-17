@@ -27,7 +27,7 @@ public class Empresa {
 
     private String emailContato;
 
-    private Set<String> telefonesContato;
+    private LinkedHashSet<String> telefonesContato;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "usuario_id")

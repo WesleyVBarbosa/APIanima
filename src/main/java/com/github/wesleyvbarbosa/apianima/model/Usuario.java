@@ -17,11 +17,11 @@ public class Usuario {
 
     private String nome;
 
-    private String Sobrenome;
+    private String sobrenome;
 
     private String usuario;
 
-    private boolean Status;
+    private boolean status;
 
     private String email;
 
