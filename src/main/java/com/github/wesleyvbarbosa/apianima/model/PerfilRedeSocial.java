@@ -5,25 +5,20 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Endereco {
+public class PerfilRedeSocial {
 
     @Id
     @GeneratedValue
     private int id;
 
-    private String rua;
-
-    private String bairro;
-
-    private String numero;
-
-    private String complemento;
-
-    private String cep;
+    private String url;
 
     @Enumerated(EnumType.STRING)
-    private UnidadeFederal uf;
+    private RedeSocial redeSocial;
 
+    @ManyToOne
+    private PessoaJuridica pessoaJuridica;
 }
