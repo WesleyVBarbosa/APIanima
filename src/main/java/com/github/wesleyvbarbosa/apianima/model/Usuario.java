@@ -1,16 +1,25 @@
 package com.github.wesleyvbarbosa.apianima.model;
 
+import java.util.Set;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.Email;
+
+@Entity
 public class Usuario {
 
+    @Id
+    @GeneratedValue
     private int id;
-    private String nome;
-    private String Sobrenome;
-    private String usuario;
-    private boolean Status;
-    private String email;
-    private String senha;
-    private boolean usuarioCorporativo;
-    private Empresa empresa;
-    private boolean usuarioAdminEmpresa;
 
+    @Email
+    private String email;
+
+    private String senha;
+
+    @ElementCollection
+    private Set<PerfilUsuario> perfil;
 }
