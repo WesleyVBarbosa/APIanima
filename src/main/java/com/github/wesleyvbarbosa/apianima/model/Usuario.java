@@ -1,5 +1,7 @@
 package com.github.wesleyvbarbosa.apianima.model;
 
+import com.github.wesleyvbarbosa.apianima.form.UsuarioForm;
+
 import java.util.Set;
 
 import javax.persistence.ElementCollection;
@@ -22,4 +24,11 @@ public class Usuario {
 
     @ElementCollection
     private Set<PerfilUsuario> perfil;
+
+    public Usuario(){}
+
+    public Usuario(UsuarioForm form) {
+        this.email = form.getEmail();
+        this.senha = form.getSenha();
+    }
 }
